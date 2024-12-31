@@ -5,24 +5,8 @@ This smart contract it will allow to wrap and unwrap an ERC-1155 into an ERC-20 
 
 ## Deploying this to a network
 
-1. Copy `.env.example` to `.env`.
-2. Set SEED_PHRASE, GAS_PRICE, INFURA_PROJECT_ID, and ETHERSCAN_API accordingly in `.env`
-3. `npx truffle migrate --network <network>`
-4. Verify on Etherscan via `npx truffle run verify Wrapped1155Factory Wrapped1155 --license LGPL-3.0-or-later --network <network>`
-
-Make sure the network you are referring to has been described in the `truffle-config.js`.
-
-The migration will use a SingletonFactory described by EIP 2470 to deterministically deploy a Wrapped1155Factory at a specific location on chain. If the SingletonFactory already exists on the chain, that deployment will be skipped. Likewise, if the Wrapped1155Factory already exists on the chain, the deployment will be skipped.
-
-## Verify
-
-For etherscan verification
-
-- Add your API key id on `.env` file.
-
-- Run the following code. 
-```
-truffle run verify Wrapped1155Factory@{factory address} --network {network name} --license LGPL-3.0-or-later
+```sh
+forge script script/Deploy.s.sol --rpc-url $RPC_URL --broadcast --sender $ADDY --private-key $PRIVATE_KEY
 ```
 
 ## ERC-20 `getWrapped1155DeployBytecode` bytecode

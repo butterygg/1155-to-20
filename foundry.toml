@@ -1,0 +1,16 @@
+[profile.default]
+src = "contracts"
+out = "forge-build"
+libs = ["node_modules", "lib"]
+remappings = [
+    "@ensdomains/=node_modules/@ensdomains/",
+    "@gnosis.pm/=node_modules/@gnosis.pm/",
+    "@nomiclabs/=node_modules/@nomiclabs/",
+    "@openzeppelin/=node_modules/@openzeppelin/",
+    "@solidity-parser/=node_modules/@solidity-parser/",
+    "openzeppelin-solidity/=node_modules/openzeppelin-solidity/",
+    "truffle/=node_modules/truffle/",
+]
+optimizer = true
+optimizer_runs = 200
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
