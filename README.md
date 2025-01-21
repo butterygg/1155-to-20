@@ -6,7 +6,11 @@ This smart contract it will allow to wrap and unwrap an ERC-1155 into an ERC-20 
 ## Deploying this to a network
 
 ```sh
-forge script script/Deploy.s.sol --rpc-url $RPC_URL --broadcast --sender $ADDY --private-key $PRIVATE_KEY
+forge script script/Deploy.s.sol \
+    --rpc-url $RPC_URL \
+    --broadcast \
+    --sender $ADDY \
+    --private-key $PRIVATE_KEY
 ```
 
 ## ERC-20 `getWrapped1155DeployBytecode` bytecode
